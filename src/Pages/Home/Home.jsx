@@ -2,7 +2,9 @@ import React from 'react'
 import './Home.css'
 import Sidebar from '../../Components/Sidebar/Sidebar'
 import Feed from '../../Components/Feed/Feed'
-
+import Explore from '../Explore/Explore'
+/*<Feed/>*/
+/*<Explore/>*/
 const Home = ({sidebar}) => {
   return (
     <>

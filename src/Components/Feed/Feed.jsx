@@ -6,19 +6,25 @@ import Card from '../Card/Card'
 const Feed = () => {
   return (
     <div className='feed'>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        <div className='card'>
+            <Card/>
+        </div>
+         <div className='card'>
+            <Card/>
+        </div>
+         <div className='card'>
+            <Card/>
+        </div>
+         <div className='card'>
+            <Card/>
+        </div>
+         <div className='card'>
+            <Card/>
+        </div>
+         <div className='card'>
+            <Card/>
+        </div>
+        
     </div>
     
   )

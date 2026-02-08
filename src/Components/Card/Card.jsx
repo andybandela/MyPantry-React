@@ -4,10 +4,10 @@ import './Card.css'
 const Card = () => {
   return (
     <div className='card'>
-                <img src={thumbnail} alt='recipe thumbnail' />
-                <h2>Ramen Noodle</h2>
-                <p>Make your firsrt bowl of ramen</p>
-            </div>
+        <img src={thumbnail} alt='recipe thumbnail' />
+        <h2 className='sn-pro-cardh2'>Ramen Noodle</h2>
+        <p className='sn-pro-cardp'>Make your first bowl of ramen</p>
+    </div>
   )
 }
 
