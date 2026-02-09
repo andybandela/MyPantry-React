@@ -1,0 +1,23 @@
+.top-section{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 16px;
+    margin-bottom: 30px;
+}
+.meta-info{
+    display: flex;
+}
+.instruction{
+    display: inline-flex;
+
+}
+
+.recipe-image{
+    padding-right: 20px;
+}
+
+.main-section{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 16px;
+}

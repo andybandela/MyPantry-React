@@ -3,6 +3,7 @@ import './Home.css'
 import Sidebar from '../../Components/Sidebar/Sidebar'
 import Feed from '../../Components/Feed/Feed'
 import Explore from '../Explore/Explore'
+import Recipe from '../Recipe/Recipe'
 /*<Feed/>*/
 /*<Explore/>*/
 const Home = ({sidebar}) => {
@@ -10,7 +11,7 @@ const Home = ({sidebar}) => {
     <>
         <Sidebar sidebar={sidebar}/>
         <div className={`container ${sidebar?"":'large-container'}`}>
-            <Feed/>
+            <Recipe/>
         </div>
     </>
   )
