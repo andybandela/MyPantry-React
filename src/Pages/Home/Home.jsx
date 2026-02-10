@@ -4,8 +4,9 @@ import Sidebar from '../../Components/Sidebar/Sidebar'
 import Feed from '../../Components/Feed/Feed'
 import Explore from '../Explore/Explore'
 import Recipe from '../Recipe/Recipe'
-/*<Feed/>*/
-/*<Explore/>*/
+//<Feed/>
+//<Explore/>
+//<Recipe/>
 const Home = ({sidebar}) => {
   return (
     <>

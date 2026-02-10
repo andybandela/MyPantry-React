@@ -3,7 +3,8 @@ import './Navbar.css'
 import menu_icon from '../../assets/menu.png'
 import logo from '../../assets/cooking_2.png'
 import search from '../../assets/search.png'
-import user_logo from '../../assets/user.png'
+//import user_logo from '../../assets/user.png'
+import chef from '../../assets/chef.png'
 
 const Navbar = ({setSidebar}) => {
   return (
@@ -24,7 +25,7 @@ const Navbar = ({setSidebar}) => {
       </div>
 
       <div className='nav-right flex-div'>
-        <img src={user_logo}/>
+        <img src={chef}/>
       </div>
       
     </nav>
