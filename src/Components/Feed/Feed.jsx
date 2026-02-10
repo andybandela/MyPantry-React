@@ -6,22 +6,22 @@ import Card from '../Card/Card'
 const Feed = () => {
   return (
     <div className='feed'>
-        <div className='card'>
+        <div className='feed-card'>
             <Card/>
         </div>
-         <div className='card'>
+         <div className='feed-card'>
             <Card/>
         </div>
-         <div className='card'>
+         <div className='feed-card'>
             <Card/>
         </div>
-         <div className='card'>
+         <div className='feed-card'>
             <Card/>
         </div>
-         <div className='card'>
+         <div className='feed-card'>
             <Card/>
         </div>
-         <div className='card'>
+         <div className='feed-card'>
             <Card/>
         </div>
         
