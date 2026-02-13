@@ -5,6 +5,7 @@ import Feed from '../../Components/Feed/Feed'
 import Explore from '../Explore/Explore'
 import Recipe from '../Recipe/Recipe'
 import Inventory from '../Inventory/Inventory'
+import AddRecipe from '../Add_Recipe/AddRecipe'
 //<Feed/>
 //<Explore/>
 //<Recipe/>
@@ -14,7 +15,7 @@ const Home = ({sidebar}) => {
     <>
         <Sidebar sidebar={sidebar}/>
         <div className={`container ${sidebar?"":'large-container'}`}>
-            <Inventory/>
+            <AddRecipe/>
         </div>
     </>
   )
