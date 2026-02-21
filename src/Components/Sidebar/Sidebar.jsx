@@ -3,10 +3,13 @@ import './Sidebar.css'
 import home_logo from '../../assets/home.png'
 import explore_logo from '../../assets/explore.png'
 import inventory_logo from '../../assets/pantry.png'
+import { useSelector } from 'react-redux'
 
-const Sidebar = ({sidebar}) => {
+const Sidebar = () => {
+
+    const expand = useSelector( state => state.toggle.expand)
   return (
-    <div className={`sidebar ${sidebar?"":"small-sidebar"}`}>
+    <div className={`sidebar ${expand?"":"small-sidebar"}`}>
         <div className='shortcut-links'>
             <div className='side-link'>
                 <img src={home_logo}/><p className='sn-pro-sidep'>Home</p>

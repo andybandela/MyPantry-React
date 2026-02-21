@@ -16,7 +16,7 @@
     width: 95%;
     flex-wrap: wrap;
     cursor: pointer;
-    border-radius: 2%;
+    border-radius: 2px;
     padding-top:10px ;
     padding-bottom: 10px;
     padding-left: 10px;

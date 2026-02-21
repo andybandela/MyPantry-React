@@ -7,17 +7,20 @@ import Recipe from '../Recipe/Recipe'
 import Inventory from '../Inventory/Inventory'
 import AddRecipe from '../Add_Recipe/AddRecipe'
 import Profile from '../Profile/Profile'
+import { useSelector } from 'react-redux'
 //<Feed/>
 //<Explore/>
 //<Recipe/>
 //<Inventory/>
 //<AddRecipe/>
-const Home = ({sidebar}) => {
+//<Profile/>
+const Home = () => {
+  const expand = useSelector( state => state.toggle.expand);
   return (
     <>
-        <Sidebar sidebar={sidebar}/>
-        <div className={`container ${sidebar?"":'large-container'}`}>
-            <Profile/>
+        <Sidebar/>
+        <div className={`container ${expand?"":'large-container'}`}>
+            <Explore/>
         </div>
     </>
   )

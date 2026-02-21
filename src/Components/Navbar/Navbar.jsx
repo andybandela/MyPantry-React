@@ -5,13 +5,20 @@ import logo from '../../assets/cooking_2.png'
 import search from '../../assets/search.png'
 //import user_logo from '../../assets/user.png'
 import chef from '../../assets/chef.png'
+import { useDispatch } from 'react-redux'
+import { toggleActions } from '../../Store'
 
-const Navbar = ({setSidebar}) => {
+const Navbar = () => {
+  const dispatch = useDispatch();
+
+  const toggleSwitch = () =>{
+    dispatch(toggleActions.toggleMenu())
+  };
   return (
     <nav className='flex-div'>
       <div className='nav-left flex-div'>
         <div className='search-box flex-div'>
-          <img className='menu-icon' src={menu_icon} alt='menu icon' onClick={() => setSidebar(prev => prev === false?true:false)} />
+          <img className='menu-icon' src={menu_icon} alt='menu icon' onClick={toggleSwitch} />
           <img className='logo' src={logo}/>
         </div>
         

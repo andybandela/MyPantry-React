@@ -1,6 +1,7 @@
 import React from 'react'
 import './Explore.css'
 import meat from '../../assets/meat.jpg'
+//import meat1 from '../../assets/meat_1.jpg'
 import fish from '../../assets/fish.jpg'
 import vegetable from '../../assets/vegy.jpg'
 import dessert from '../../assets/dessert.jpg'
@@ -11,7 +12,7 @@ const Explore = () => {
         <div className='cont big-group'>
             <div className='item'>
                 <img src={meat} />
-                <p>Meat</p>
+                <p>Meat & Poultry</p>
             </div>
             <div className='item'>
                 <img src={fish}/>
