@@ -18,9 +18,8 @@ const Home = () => {
   const expand = useSelector( state => state.toggle.expand);
   return (
     <>
-        <Sidebar/>
         <div className={`container ${expand?"":'large-container'}`}>
-            <Explore/>
+            <Inventory/>
         </div>
     </>
   )
