@@ -32,7 +32,7 @@ const Profile = () => {
                     </div>
                 </div>
 
-                <div class="preference-group">
+                <div className="preference-group">
                     <h3>Preferred Diet</h3>
                     <div className="checkbox-grid">
                         <label><input type="checkbox"/> Vegetarian</label>
@@ -45,8 +45,8 @@ const Profile = () => {
                     <h3>Preferred Main Ingredient</h3>
 
                     <div className='add-main-row'>
-                        <input type="text" id="mainIngredientInput" class="input-field" placeholder="Add ingredient..." />
-                        <button id="addMainIngredientBtn" class="btn-secondary">Add</button>
+                        <input type="text" id="mainIngredientInput" className="input-field" placeholder="Add ingredient..." />
+                        <button id="addMainIngredientBtn" className="btn-secondary">Add</button>
                     </div>
 
                     <div className='tag-list' id='mainIngredientList'></div>

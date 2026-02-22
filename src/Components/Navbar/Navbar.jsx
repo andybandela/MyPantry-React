@@ -1,4 +1,3 @@
-import React from 'react'
 import './Navbar.css' 
 import menu_icon from '../../assets/menu.png'
 import logo from '../../assets/cooking_2.png'
@@ -7,9 +6,10 @@ import search from '../../assets/search.png'
 import chef from '../../assets/chef.png'
 import { useDispatch } from 'react-redux'
 import { toggleActions } from '../../Store'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(false);
 
   const toggleSwitch = () =>{
     dispatch(toggleActions.toggleMenu())
@@ -19,7 +19,9 @@ const Navbar = () => {
       <div className='nav-left flex-div'>
         <div className='search-box flex-div'>
           <img className='menu-icon' src={menu_icon} alt='menu icon' onClick={toggleSwitch} />
-          <img className='logo' src={logo}/>
+          <NavLink to={'/'} >
+            <img className='logo' src={logo}/>
+          </NavLink>
         </div>
         
       </div>
@@ -32,7 +34,9 @@ const Navbar = () => {
       </div>
 
       <div className='nav-right flex-div'>
-        <img src={chef}/>
+        <NavLink to={'/profile'} >
+          <img src={chef}/>
+        </NavLink>
       </div>
       
     </nav>
