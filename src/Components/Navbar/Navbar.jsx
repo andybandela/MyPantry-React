@@ -9,7 +9,7 @@ import { toggleActions } from '../../Store'
 import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
-  const dispatch = useDispatch(false);
+  const dispatch = useDispatch();
 
   const toggleSwitch = () =>{
     dispatch(toggleActions.toggleMenu())

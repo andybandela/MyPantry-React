@@ -179,6 +179,26 @@
   }
 }
 
+.tooltip{
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext{
+  visibility:  hidden;
+  width: 120px;
+  background-color: transparent;
+  color: rgb(79, 79, 79);
+  text-align: center;
+  border-radius: 6px;
+  z-index: 1;
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+.tooltip:hover .tooltiptext{
+  visibility: visible;
+}
 
 .recommendation-section {
   display: flex;
