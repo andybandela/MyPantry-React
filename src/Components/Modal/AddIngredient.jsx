@@ -11,21 +11,22 @@ const AddIngredient = ({onSubmit,children}) => {
     }}>
         <div className='modal'>
             <div className='modal-header'>
-                <h3>{children}</h3>
+                <h3>{children}: Add Ingredient</h3>
                 <p className='close' onClick={() => onSubmit()} >&times;</p>
             </div>
+            <div className='sec-divider'></div>
             <div className='modal-content'>
-                <div>
-                    <label>Ingredient</label>
-                    <input type='text'/>
+                <div className='mini-section'>
+                    <label className='sec-label'>Ingredient</label>
+                    <input type='text' className='inpt-field' />
                 </div>
-                <div>
-                    <label>Unit</label>
-                    <input type='text'/>
+                <div className='mini-section'>
+                    <label className='sec-label'>Unit</label>
+                    <input type='text' className='inpt-field' />
                 </div>
-                <div>
-                    <label>Quantity</label>
-                    <input type='text'/>
+                <div className='mini-section'>
+                    <label className='sec-label'>Quantity</label>
+                    <input type='text'className='inpt-field' />
                 </div>
             </div>
             <div className='modal-footer'>
