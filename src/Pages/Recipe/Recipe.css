@@ -35,8 +35,7 @@
 
 .meta-info {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   gap: 2rem;
 
   background-color: #fff; 
@@ -133,7 +132,7 @@
 /* Right column (Ingredients card) */
 .ingredients {
   position: sticky;
-  top: 2rem;
+  top: 5.5rem;
 
   background-color: #f7f7f7;
   padding: 1.75rem;

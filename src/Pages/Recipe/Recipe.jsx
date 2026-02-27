@@ -1,11 +1,9 @@
 import React from 'react'
 import './Recipe.css'
 import thumbnail from '../../assets/thumbnail.png'
-import yesIn from '../../assets/accept.png'
-import noIn from '../../assets/cancel.png'
-import subIn from '../../assets/equal.png'
 import { Recipe_data } from '../../Store/data'
 import MetaInfo from '../../Components/Recipe/MetaInfo'
+import Ingredient from '../../Components/Recipe/Ingredient'
 
 const Recipe = () => {
   return (
@@ -33,22 +31,7 @@ const Recipe = () => {
             <div className='ingredients'>
                 <h4>Ingredient list</h4>
                 <ul className='ingredient-list'>
-                    <li className='ingredient'>
-                        <span>Item</span>
-                        <img src={yesIn} alt='availability' className='ingredient-status'/>
-                    </li>
-                    <li className='ingredient'>
-                        <span>Item</span>
-                        <img src={yesIn} alt='availability' className='ingredient-status'/>
-                    </li>
-                    <li className='ingredient'>
-                        <span>Item</span>
-                        <img src={noIn} alt='availability' className='ingredient-status'/>
-                    </li>
-                    <li className='ingredient'>
-                        <span>Item</span>
-                        <img src={subIn} alt='availability' className='ingredient-status'/>
-                    </li>
+                    {Recipe_data.recipe_ingredients.map(ing => <Ingredient key={ing.ingredient} {...ing} />)}
                 </ul>
             </div>
         </div>

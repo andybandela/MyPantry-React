@@ -174,13 +174,41 @@ export const Recipe_data = {
         }
     ],
     recipe_ingredients : [
-        'Chicken',
-        'Noodles',
-        'MSG',
-        'Salt',
-        'Spring Onion',
-        'Corn',
-        'Garlic'
+        {
+            ingredient: 'Chicken',
+            available: 'yes',
+            sub:'available'
+        },
+        {
+            ingredient: 'Noodles',
+            available: 'yes',
+            sub:'available'
+        },
+        {
+            ingredient: 'MSG',
+            available: 'no',
+            sub:'not available'
+        },
+        {
+            ingredient: 'Salt',
+            available: 'yes',
+            sub:'available'
+        },
+        {
+            ingredient: 'Spring Onion',
+            available: 'sub',
+            sub:'sub with Onion'
+        },
+        {
+            ingredient: 'Corn',
+            available: 'no',
+            sub:'not available'
+        },
+        {
+            ingredient: 'Garlic',
+            available: 'yes',
+            sub:'available'
+        }
     ]
 }
 
