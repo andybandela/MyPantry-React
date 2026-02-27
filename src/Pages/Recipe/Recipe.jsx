@@ -1,41 +1,22 @@
 import React from 'react'
 import './Recipe.css'
 import thumbnail from '../../assets/thumbnail.png'
-import prep from '../../assets/prep.png'
-import cook from '../../assets/cooking_time.png'
-import serv from '../../assets/dish.png'
-import rest from '../../assets/timer.png'
 import yesIn from '../../assets/accept.png'
 import noIn from '../../assets/cancel.png'
 import subIn from '../../assets/equal.png'
+import { Recipe_data } from '../../Store/data'
+import MetaInfo from '../../Components/Recipe/MetaInfo'
 
 const Recipe = () => {
   return (
     <div className='recipe'>
 
         <div className='top-section'>
-            <div className='title'> <h2>Recipe name</h2> </div>
+            <div className='title'> <h2>{Recipe_data.recipe_name}</h2> </div>
             <div className='meta-info'>
                 
-                <div className='meta-item'>
-                    <img src={prep} alt='prep time'/>
-                    <span>15min</span>
-                </div>
-                <span className='meta-divider'/>
-                <div className='meta-item'>
-                    <img src={cook} alt='cook time'/>
-                    <span>30min</span>
-                </div>
-                <span className='meta-divider'/>
-                <div className='meta-item'>
-                    <img src={rest} alt='rest time'/>
-                    <span>30min</span>
-                </div>
-                <span className='meta-divider'/>
-                <div className='meta-item'>
-                    <img src={serv} alt='serving'/>
-                    <span>4 servings</span>
-                </div>
+                {Recipe_data.meta_info.map( meta => <MetaInfo key={meta.meta_type} {...meta} />)}
+                
                 
             </div>
         </div>

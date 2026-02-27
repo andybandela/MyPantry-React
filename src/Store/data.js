@@ -148,4 +148,40 @@ const  Invetory_data = [
     }
 ];
 
+export const Recipe_data = {
+    recipe_name : 'Chicken Ramen',
+    recipe_instructions : '',
+    meta_info: [
+        {
+            meta_type: 'prep time',
+            meta_time: 15
+        },
+        {
+            meta_type: 'cook time',
+            meta_time: 30
+        },
+        {
+            meta_type: 'rest time',
+            meta_time: 20
+        },
+        {
+            meta_type: 'fridge time',
+            meta_time: 10
+        },
+        {
+            meta_type: 'servings',
+            meta_time: 4
+        }
+    ],
+    recipe_ingredients : [
+        'Chicken',
+        'Noodles',
+        'MSG',
+        'Salt',
+        'Spring Onion',
+        'Corn',
+        'Garlic'
+    ]
+}
+
 export default Invetory_data;
