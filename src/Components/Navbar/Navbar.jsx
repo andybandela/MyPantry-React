@@ -27,7 +27,7 @@ const Navbar = () => {
       </div>
       <div className='nav-middle flex-div'>
         <div className='search-box flex-div'>
-          <input type='text' placeholder='Search'/>
+          <input id='search' type='text' placeholder='Search'/>
           <img className='search-logo' src={search}/>
         </div>
         
