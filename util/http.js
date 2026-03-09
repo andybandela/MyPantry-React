@@ -6,17 +6,28 @@ export const fetchRecipes = async() => {
     const response = await fetch('http://localhost:8080/feed/recipes');
     console.log(`response: ${response}`);
 
-    if(!response.ok){
-        const error = new Error('An error occured while fetching the events');
-        error.code = response.status;
-        error.info = await response.json() || `Can't fetch data`;
-        throw error;
+    if(response.status !== 200){
+        throw new Error('An error occured while fetching the events');
     }
 
     const {recipes} = await response.json();
     console.log(`recipes:${recipes}`)
 
     return recipes;
+}
+
+export const fetchRecipe = async (recipeName) =>{
+    console.log(`params: ${recipeName}`);
+    
+    const response = await fetch(`http://localhost:8080/recipe/${recipeName}`);
+    if(response.status !== 200){
+        throw new Error('An error occured while fetching the events');
+    }
+    const {recipe} = await response.json();
+    console.log(`data: ${recipe}`);
+    
+    return recipe;
+
 }
 
 export const queryClient = new QueryClient();
