@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {index:true, element:<Feed/>},
       {path:'explore', element:<Explore/>},
       {path:'inventory',element:<Inventory/>},
-      {path:'recipe/:recipeName',element:<Recipe/>},
+      {path:'recipe',element:<Recipe/>},
       {path:'recipe/add', element:<AddRecipe/>},
       {path:'profile', element:<Profile/>}
     ]
