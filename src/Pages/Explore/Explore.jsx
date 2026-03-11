@@ -1,43 +1,42 @@
 import React from 'react'
 import './Explore.css'
-import meat from '../../assets/meat.jpg'
-//import meat1 from '../../assets/meat_1.jpg'
-import fish from '../../assets/fish.jpg'
-import vegetable from '../../assets/vegy.jpg'
-import dessert from '../../assets/dessert.jpg'
+import { fetchCategories } from '../../../util/http'
+import { useQuery } from '@tanstack/react-query'
+import { NavLink } from 'react-router-dom'
 
 const Explore = () => {
-  return (
-    <div className='category'>
-        <div className='cont big-group'>
-            <div className='item'>
-                <img src={meat} />
-                <p>Meat & Poultry</p>
+    const { data, isPending } = useQuery({
+        queryKey: ['category'],
+        queryFn: fetchCategories
+    })
+    return (
+        <div className='category'>
+            <div className='cont big-group'>
+                {isPending ? <p>Loading</p> :
+                    data.main.map(
+                        cat => (
+                            <NavLink key={cat.category} to={cat.param}>
+                                <div className='item'>
+                                    <img src={cat.imageUrl} />
+                                    <p>{cat.category}</p>
+                                </div>
+                            </NavLink>
+                        )
+                    )
+                }
+
             </div>
-            <div className='item'>
-                <img src={fish}/>
-                <p>Fish & Crustacean</p>
-            </div>
-            <div className='item'>
-                <img src={vegetable}/>
-                <p>Vegetarian</p>
-            </div>
-            <div className='item'>
-                <img src={dessert}/>
-                <p>Dessert</p>
+            <div className='cont small-group'>
+                {isPending ? <p>Loading</p> : data.sub.map(
+                    cat => (
+                        <NavLink key={cat.category} to={cat.param}>
+                            <div className='item'>{cat.category} </div>
+                        </NavLink>
+                    )
+                )}
             </div>
         </div>
-        <div className='cont small-group'>
-            <div className='item'> French</div>
-            <div className='item'>Congolese</div>
-            <div className='item'>Indian</div>
-            <div className='item'>Mexican</div>
-            <div className='item'>Chinese</div>
-            <div className='item'>Italian</div>
-            <div className='item'>Greek</div>
-        </div>
-    </div>
-  )
+    )
 }
 
 export default Explore

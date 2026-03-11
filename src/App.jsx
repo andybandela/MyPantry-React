@@ -10,6 +10,7 @@ import AddRecipe from './Pages/Add_Recipe/AddRecipe'
 import Profile from './Pages/Profile/Profile'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClient } from '../util/http'
+import Category from './Components/Inventory/CategoryBlock'
 
 const router = createBrowserRouter([
   {path: '/',
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
     element: <Home/>,
     children:[
       {index:true, element:<Feed/>},
-      {path:'explore', element:<Explore/>},
+      {path:'explore',element:<Explore/>},
+      {path:'category',element:<Category/>},
       {path:'inventory',element:<Inventory/>},
       {path:'recipe',element:<Recipe/>},
       {path:'recipe/add', element:<AddRecipe/>},

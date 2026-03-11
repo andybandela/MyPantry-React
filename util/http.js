@@ -21,13 +21,23 @@ export const fetchRecipe = async (recipeName) =>{
     
     const response = await fetch(`http://localhost:8080/recipe/${recipeName}`);
     if(response.status !== 200){
-        throw new Error('An error occured while fetching the events');
+        throw new Error('An error occured while fetching recipes');
     }
     const {recipe} = await response.json();
     //console.log(`data: ${recipe}`);
     
     return recipe;
 
+}
+
+export const fetchCategories = async () =>{
+    const response = await fetch('http://localhost:8080/category');
+    if(response.status !== 200){
+        throw new Error ('An error occured while fetching categories');
+    }
+    const {cat} = await response.json();
+
+    return cat;
 }
 
 export const queryClient = new QueryClient();
