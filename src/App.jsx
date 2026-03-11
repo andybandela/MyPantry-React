@@ -10,7 +10,7 @@ import AddRecipe from './Pages/Add_Recipe/AddRecipe'
 import Profile from './Pages/Profile/Profile'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClient } from '../util/http'
-import Category from './Components/Inventory/CategoryBlock'
+import Category from './Components/Category/Category'
 
 const router = createBrowserRouter([
   {path: '/',
