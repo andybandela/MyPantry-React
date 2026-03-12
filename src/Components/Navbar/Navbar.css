@@ -32,3 +32,9 @@ nav{
 .nav-right img{
     width: 40px;
 }
+
+.btn-menu{
+    border: none;
+    background: #fff;
+    margin-right: 20px;
+}

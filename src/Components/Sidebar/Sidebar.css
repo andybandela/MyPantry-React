@@ -27,8 +27,17 @@
 .side-link img{
     margin-right: 25px;
 }
+.i-right{
+    margin-right: 25px;
+}
+
 .small-sidebar{
     width: 5%;
+}
+.small-sidebar i{
+    padding-top:10px ;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 .small-sidebar p{
     display: none;

@@ -10,8 +10,9 @@ const Category = () => {
     const [searchParams] = useSearchParams();
     const catParam = searchParams.get('cat');
     const idParam = searchParams.get('_id');
+    const nameParam = searchParams.get('name');
     const { data: cat, isPending: catPending } = useQuery({
-        queryKey: ['category'],
+        queryKey: ['category',nameParam],
         queryFn: fetchCategories
     });
     const { data, isPending } = useQuery({
