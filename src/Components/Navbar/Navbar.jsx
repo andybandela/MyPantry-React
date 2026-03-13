@@ -1,8 +1,5 @@
 import './Navbar.css' 
-//import menu_icon from '../../assets/menu.png'
-import logo from '../../assets/cooking_2.png'
-import search from '../../assets/search.png'
-//import user_logo from '../../assets/user.png'
+import logo from '../../assets/cooking.png'
 import chef from '../../assets/chef.png'
 import { useDispatch,useSelector } from 'react-redux'
 import { toggleActions } from '../../Store'
@@ -30,7 +27,7 @@ const Navbar = () => {
       <div className='nav-middle flex-div'>
         <div className='search-box flex-div'>
           <input id='search' type='text' placeholder='Search'/>
-          <img className='search-logo' src={search}/>
+          <i className="fa-solid fa-magnifying-glass"></i>
         </div>
         
       </div>
