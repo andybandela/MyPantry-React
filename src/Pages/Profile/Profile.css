@@ -157,7 +157,7 @@
   background: #e9e9e9;
 }
 
-.btn{
+.btn-sub{
     color: #fff;
     padding: 0.5rem 1.5rem;
     border-radius: 12px;
@@ -167,7 +167,7 @@
     height: 3.3rem;
     width: 15rem;
 }
-.btn:active {
+.btn-sub:active {
     transform: translateY(1rem);
     transition: transform 0s ease;
     height: 2.7rem;
