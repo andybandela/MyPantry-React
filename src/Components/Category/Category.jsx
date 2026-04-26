@@ -20,20 +20,40 @@ const Category = () => {
         queryFn: fetchRecipes
     });
 
+    //Loading state
+    if (catPending || isPending) {
+        return <div className='cat'><p>Loading</p></div>;
+    }
+
+    //Safety check for data structure
+    const recipesIDs = cat?.[catParam]?.[idParam]?.recipes;
+    if (!recipesIDs || !Array.isArray(recipesIDs)) {
+        return <div className='cat'><p>No recipes found for this category.</p></div>;
+    }
+
 
     return (
         <div className='cat'>
-            {isPending ? <p>Loading</p> : cat[catParam][idParam].recipes.map(
-                catId => (
-                    <NavLink key={catId} to={`/recipe?name=${data[catId].param}&_id=${data[catId]._id}`}>
-                        <div className='cat-card' >
-                            {catPending ? <p>Loading</p> : <Card recipeDesc={data[catId].Description} recipeName={data[catId].title} recipeThumbnail={data[catId].imageUrl} />}
+            {recipesIDs.map(recipeID => {
+                const recipe = data?.[recipeID];
+                if (!recipe) {
+                    return null; // Skip if recipe data is not available
+                }
+                return (
+                    <NavLink key={recipeID} to={`/recipe?name=${recipe.param}&_id=${recipe._id}`}>
+                        <div className='cat-card'>
+                            <Card
+                                recipeDesc={recipe.Description}
+                                recipeName={recipe.title}
+                                recipeThumbnail={recipe.imageUrl}
+                            />
                         </div>
                     </NavLink>
-                )
-            )}
+                );
+                })
+            }
         </div>
-    )
+    );
 }
 
 export default Category
